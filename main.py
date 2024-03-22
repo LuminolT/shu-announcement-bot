@@ -8,7 +8,11 @@ from botpy.ext.cog_yaml import read
 
 def main():
     logger.add("announcements.log")
-    config = read(os.path.join(os.path.dirname(__file__), "configs\\info.yaml"))
+    
+    config = {
+        "appid":    os.environ.get("SHU_BOT_APPID"),
+        "secret":   os.environ.get("SHU_BOT_SECRET")
+    }
     
     crawler = Crawler(db_path="announcements.sqlite")
     intents = botpy.Intents(public_guild_messages=True)
