@@ -10,7 +10,7 @@ from typing import List
 
 Announcement = namedtuple("Announcement", ["title", "date", "link"])
 
-class Crawler():
+class SHUCrawler():
 
     def __init__(self, db_path: pathlib.Path) -> None:
         self.url        = "https://jwb.shu.edu.cn/index/tzgg.htm"

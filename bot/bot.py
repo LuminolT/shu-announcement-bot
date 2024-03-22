@@ -9,7 +9,7 @@ from botpy.ext.cog_yaml import read
 
 from loguru import logger
 
-from crawler import Crawler
+from crawler import SHUCrawler
 
 is_fetching_enabled = False
 is_first_run = True
@@ -34,7 +34,7 @@ async def stop(api: BotAPI, message: Message, **kwargs):
     else:
         await message.reply(content="网页信息获取未启动。")
         
-async def fetch_and_send(api: BotAPI, message: Message, crawler: Crawler):
+async def fetch_and_send(api: BotAPI, message: Message, crawler: SHUCrawler):
     
     while is_fetching_enabled:
         crawler.update_database()
@@ -60,7 +60,7 @@ async def fetch_and_send(api: BotAPI, message: Message, crawler: Crawler):
         
 class SHUBot(botpy.Client):
     
-    def __init__(self, crawler: Crawler, *args, **kwargs):
+    def __init__(self, crawler: SHUCrawler, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.crawler = crawler
         
