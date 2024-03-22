@@ -8,6 +8,11 @@
 
 虽说是 SHUSHU 工具，但是你只需要修改 SHUCrawler 类就可以轻松实现对其他网站通知的支持。当然，也可以通过 SHUCrawler 的 method 实现自动发邮件等功能。
 
+<img  src="https://github.com/LuminolT/shu-announcement-bot/assets/48964589/e620c381-8005-40bc-b07b-989c4908a62b/491d50b9f877777705a5323337a61e5c"
+      alt="491d50b9f877777705a5323337a61e5c"
+      style="width: 50%;">
+
+
 ## 使用说明
 
 本项目依赖 [QQ Bot Python SDK](https://github.com/tencent-connect/botpy)，你需要通过 [RTF QQ Bot Manual](https://bot.q.qq.com/wiki/) 的方式获得相关配置参数。
